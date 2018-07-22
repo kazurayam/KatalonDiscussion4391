@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>target URL is https://react-table.js.org/#/story/simple-table</description>
+   <name>TC1</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d7ae5da6-e1f2-49de-ac7b-ab54b4a39ace</testCaseGuid>
+</TestCaseEntity>
