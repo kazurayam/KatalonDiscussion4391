@@ -8,7 +8,7 @@ You can clone this out onto you PC and execute it with your Katalon Stduio.
 
 This demo project was developed using Katalon Studio version 5.4.2
 
-This demo project was developed in the hope that it will respond to a post in the Katalon Form: ["Does Katalon Studio support React.js Applications"](
+This demo project was developed in the hope that it will solve a problem raised by a post in the Katalon Form: ["Does Katalon Studio support React.js Applications"](
 https://forum.katalon.com/discussion/4391/does-katalon-studio-support-react-js-applications).
 
 The original question was:
