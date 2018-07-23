@@ -48,7 +48,7 @@ I want you to read the test case  [TC1](https://github.com/kazurayam/KatalonDisc
 
 ### dealing with nested &lt;iframe&gt;
 
-The [Application Under Test](https://react-table.js.org/#/story/simple-table) contains 2 nested &lt;iframe&gt;. The test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) calls [WebUI.switchToFrame](https://docs.katalon.com/display/KD/%5BWebUI%5D+Switch+To+Frame) in order to switch the scope of DOM navigation.
+The [Application Under Test](https://react-table.js.org/#/story/simple-table) contains 2 nested &lt;iframe&gt;. The test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) calls [WebUI.switchToFrame()](https://docs.katalon.com/display/KD/%5BWebUI%5D+Switch+To+Frame) in order to switch the scope of DOM navigation.
 
 ### No `Parent iframe`
 
@@ -60,7 +60,7 @@ In the Test Objct's Settings UI I found an option named `Parent iframe`. I tried
 
 ### waiting for elements present carefully
 
-You can easily find that the test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) makes frequent call to WebUI.verifyElementPresent(). This is to wait for the documents in &lt;iframe&gt; to be loaded. It depends how long seconds it would take for document loading.
+You would find that the test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) makes frequent call to WebUI.verifyElementPresent(). This is to wait for the documents inside the &lt;iframe&gt; nodes to be loaded. This is required. Otherwise you will get *ElementNotFound* exceptions.
 
 ### Katalon's Recorder and Spy do not help
 
