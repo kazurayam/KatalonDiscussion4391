@@ -1,4 +1,4 @@
-How to React.js-powered WebUI with Katalon Studio
+How to test React.js-powered WebUI with Katalon Studio
 =====
 
 # What is this repository?
