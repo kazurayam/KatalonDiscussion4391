@@ -1,7 +1,7 @@
 How to test React.js-powered WebUI with Katalon Studio
 =====
 
-# What is this repository?
+# Background
 
 This is a [Katalon Studio](https://www.katalon.com/) project for demonstration purpose.
 You can clone this out onto you PC and execute it with your Katalon Stduio.
@@ -15,7 +15,7 @@ The original question was:
 >Does katalon studio support react.js web applications?
 Using selenium web driver we are finding it challenging to identify unique locators. Our application is built on react.js and was wondering if katalon studio supports react.js applications.
 
-# About this demonstration
+# About this demo
 
 This katalon studio project executes a automated test against a React.js-powered application:
 
@@ -79,6 +79,6 @@ Katalon Studio runs on top of the Selenium WebDriver. WebDriver looks at DOM in 
 
 Therefore I think it is not appropriate to state "Katalon Studio supports React.js-powered application". No. Katalon knows nothing about React.js.
 
-## Related discussions
+# Related discussions
 
 1. https://forum.katalon.com/discussion/5236/possible-bug-with-web-object-spy-and-elements-in-iframe
