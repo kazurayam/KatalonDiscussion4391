@@ -75,7 +75,7 @@ If you are going to test React.js-powered appliation, you should not expect Reco
 
 ### Katalon Studio is not concerned about the JavaScript frameworks
 
-Katalon Studio runs on top of the Selenium WebDriver. WebDriver looks at DOM in Browser. DOM --- Document Object Model --- is what you can see in the Browsers DevTool's DOM Viewer. Katalon Studio and Selenium Webdriver --- they are not aware at all how the DOM is constructed with which JavaScript frameworks. Katalon Studio does not know jQuery, Angular, React at all. Katalon (= Selenium WebDriver) looks at DOM; that's all.
+Katalon Studio runs on top of the Selenium WebDriver. WebDriver looks at DOM in Browser. DOM (Document Object Model) is what you can see in the Browsers DevTool's DOM Viewer. Selenium WebDriver and Katalon Studio are not aware at all how the DOM is constructed with which JavaScript frameworks such as jQuery, Angular, React.
 
 Therefore I think it is not appropriate to state "Katalon Studio supports React.js-powered application". No. Katalon knows nothing about React.js.
 
