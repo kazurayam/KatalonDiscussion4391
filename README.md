@@ -50,13 +50,13 @@ I want you to read the test case  [TC1](https://github.com/kazurayam/KatalonDisc
 
 The [Application Under Test](https://react-table.js.org/#/story/simple-table) contains 2 nested &lt;iframe&gt;. The test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) calls [WebUI.switchToFrame](https://docs.katalon.com/display/KD/%5BWebUI%5D+Switch+To+Frame) in order to switch the scope of DOM navigation.
 
-### What is `Parent iframe` ?
+### No `Parent iframe`
 
 One thing to be noted is that the Test Objects I made, for example [Object Repository/Page_React Table/iframe1components/iframe2components/div_ReactTable](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Object%20Repository/Page_React%20Table/iframe1components/iframe2components/div_ReactTable.rs) does NOT have parent object.
 
 ![No parent object](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/docs/no_parent_iframe.png)
 
-In the Test Objct's Settings UI I found an option named `Parent iframe`. I tried this opton on, then it did not work for me. So I descided not to use the `Parent iframe` option.
+In the Test Objct's Settings UI I found an option named `Parent iframe`. I tried this option on, then it caused problems. So I descided not to use the `Parent iframe` option ON.
 
 ### waiting for elements present carefully
 
