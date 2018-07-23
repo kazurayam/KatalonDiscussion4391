@@ -40,10 +40,22 @@ The test opens the URL in browser, find the table displayed, click a column labe
 
 I am not familiar with React.js at all now (July 2018). This is my first experience of the React.js framework. Therefore I can not say anything definite about *how to test React.js-powered application using Katalon Studio*. All I can do is just to describe what I have done and found.
 
-I want you to read the test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) where you would find a few tips and tricks.
+I want you to read the test case  [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) where you would find a few tips and tricks.
+
+### dealing with nested &lt;iframe&gt;
+
+The [Application Under Test](https://react-table.js.org/#/story/simple-table) contains 2 nested &lt;iframe&gt;. The test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) calls [WebUI.switchToFrame](https://docs.katalon.com/display/KD/%5BWebUI%5D+Switch+To+Frame) in order to switch the scope of DOM navigation.
+One thing to be noted is that the Test Object I made, for example [Object Repository/Page_React Table/iframe1components/iframe2components/div_ReactTable](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Object%20Repository/Page_React%20Table/iframe1components/iframe2components/div_ReactTable.rs) does Not have parent object.
+
+![]()
 
 
 
+### waiting for elements present carefully
+
+### Katalon's Recorder and Spy do not help much
+
+### need skill for Browser's DevTool, XPath, CSS selector
 
 ## Related discussions
 
