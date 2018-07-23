@@ -25,7 +25,7 @@ The test opens the URL in browser, find the table displayed, click a column labe
 
 ![ReactTable - Simple Table demo](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/docs/react-table_js_org_demo.png)
 
-This running demo would be useful for you to develop a test for your React.js-powered application. 
+I hope that this demo project proves that you can test a web application powered by React.js using Katalon Studio.
 
 ## How to run the demonstration
 
@@ -64,22 +64,20 @@ You can easily find that the test case [TC1](https://github.com/kazurayam/Katalo
 
 ### Katalon's Recorder and Spy do not help
 
-Once I tried Katalon's Recoder to auto-generate Test Objects which point parts of ReactTable. It generated many test objects, but I found these auto-generated stuff useless. I created necessary Test Objects manually, one-by-one, specifying appropriate selectors by XPath and CSS Selectors.
+Once I tried Katalon's Recoder to auto-generate Test Objects which point parts of ReactTable. It generated many test objects, but I found these auto-generated stuff useless. I haven't spent long thinking about why. Just I created my Test Objects manually, one-by-one, specifying appropriate selectors by XPath and CSS Selectors while paying attention to `WebUI.switchToFrame()`  processing.
 
-I think that Web Recorder and Spy --- these tools are designed for simpler Web apps; Recorder and Spy is not appropriate tools to deal with web application powered by sophisticated JavaScript frameworks --- jQuery, Angular and React.
+### Skill for Browser's DevTool, XPath, CSS selector needed
 
-
-### need skill for Browser's DevTool, XPath, CSS selector
-
-If you are going to test React.js-powered appliation, you should not expect Recorder and Spy to help you. The real testers should get well-trained the following 3 items:
+If you are going to test React.js-powered appliation, you should not expect Recorder and Spy to help you at all. The real testers should get well-trained themselves for the following 3 items:
 - [Browser's DevTool, DOM viewer DOM](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-dom?hl=en)
 - [XPath](https://www.w3schools.com/xml/xpath_intro.asp)
 - [CSS Selector](https://www.w3schools.com/cssref/css_selectors.asp)
 
-### Katalon Studio is not aware how the DOM is constructed
+### Katalon Studio is not concerned about the JavaScript frameworks
 
 Katalon Studio runs on top of the Selenium WebDriver. WebDriver looks at DOM in Browser. DOM --- Document Object Model --- is what you can see in the Browsers DevTool's DOM Viewer. Katalon Studio and Selenium Webdriver --- they are not aware at all how the DOM is constructed using which JavaScript frameworks. Katalon Studio does not know jQuery, Angurlar, React at all. All it see is DOM; that's all.
 
+Therefore I think it is not appropriate to state "Katalon Studio supports React.js-powered application". No. Katalon knows nothing about React.js.
 
 ## Related discussions
 
