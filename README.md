@@ -29,7 +29,7 @@ I hope that this demo project proves that you can test a web application powered
 
 ## How to run the demo
 
-1. git clone this project `KatalonDiscussion4391` to your local PC
+1. git clone this project `[KatalonDiscussion4391](https://github.com/kazurayam/KatalonDiscussion4391.git)` to your local PC
 2. open the project `KatalonDiscussion 4391` with Katalon Studio ver5.4 or higher.
 3. load the test case `TC1`
 4. run the test case `TC1` with your favorite Browser (Firefox or Chrome)
