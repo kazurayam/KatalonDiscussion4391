@@ -22,7 +22,9 @@ This katalon studio project executes a automated test against a React.js-powered
 
 - https://react-table.js.org/#/story/simple-table
 
+The test opens the URL in browser, find the table displayed, click a column labeled 'First name' to sort the rows, and tries to find expected data in the table.
 
+![ReactTable - Simple Table demo](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/docs/react-table_js_org_demo.png)
 
 
 
