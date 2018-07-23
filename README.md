@@ -1,4 +1,4 @@
-Testing React.js-powered WebUI with Katalon Studio
+How to React.js-powered WebUI with Katalon Studio
 =====
 
 # What is this repository?
@@ -31,15 +31,20 @@ The test opens the URL in browser, find the table displayed, click a column labe
 2. open the project `KatalonDiscussion 4391` with Katalon Studio ver5.4 or higher.
 3. load the test case `TC1`
 4. run the test case `TC1` with your favorite Browser (Firefox or Chrome)
-5. The test case runs through without significant error.
-6. However the test case is likely to report FAILURE because the data displayed in the [Application Under Test](https://react-table.js.org/#/story/simple-table) changes dynamically.
+5. The test case clicks the `First Name` so that the rows of tables are sorted.
+6. The test case tries to find a few expected fixture in the table rows. The test case records boolean result (Found or NotFound).   
+7. The test case should run through to the end without significant processing error.
+8. However the test case is likely to report FAILURE, which means the number of unfound data > 0. This is due to the odd behavior of the AUT: data displayed in the [Application Under Test](https://react-table.js.org/#/story/simple-table)'s Table changes all the time.
 
-# What I have learned.
+## What I have learned.
 
 I am not familiar with React.js at all now (July 2018). This is my first experience of the React.js framework. Therefore I can not say anything definite about *how to test React.js-powered application using Katalon Studio*. All I can do is just to describe what I have done and found.
 
+I want you to read the test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) where you would find a few tips and tricks.
 
 
-# Related discussions
+
+
+## Related discussions
 
 https://forum.katalon.com/discussion/5236/possible-bug-with-web-object-spy-and-elements-in-iframe
