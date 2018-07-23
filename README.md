@@ -34,7 +34,7 @@ I hope that this demo project proves that you can test a web application powered
 3. load the test case `TC1`
 4. run the test case `TC1` with your favorite Browser (Firefox or Chrome)
 5. The test case clicks the `First Name` so that the rows of tables are sorted.
-6. The test case tries to find a few expected fixture in the table rows. The test case records boolean result (Found or NotFound).   
+6. The test case tries to find a few expected data in the table rows. The test case records boolean result (Found or NotFound).   
 7. The test case should run through to the end without significant processing error.
 8. However the test case is likely to report FAILURE, which means the number of unfound data > 0. This is due to the odd behavior of the AUT: data displayed in the [Application Under Test](https://react-table.js.org/#/story/simple-table)'s Table changes all the time.
 
