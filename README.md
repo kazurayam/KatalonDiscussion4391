@@ -27,7 +27,7 @@ The test opens the URL in browser, find the table displayed, click a column labe
 
 I hope that this demo project proves that you can test a web application powered by React.js using Katalon Studio.
 
-## How to run the demonstration
+## How to run the demo
 
 1. git clone this project `KatalonDiscussion4391` to your local PC
 2. open the project `KatalonDiscussion 4391` with Katalon Studio ver5.4 or higher.
