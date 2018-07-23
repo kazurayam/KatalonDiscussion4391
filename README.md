@@ -2,7 +2,7 @@ How to test React.js-powered WebUI with Katalon Studio
 =====
 
 This is a [Katalon Studio](https://www.katalon.com/) project for demonstration purpose.
-You can clone this out onto you PC and execute it with your Katalon Stduio.
+You can clone this out onto you PC and execute it with your Katalon Studio.
 
 This demo project was developed using Katalon Studio version 5.4.2
 
