@@ -25,6 +25,8 @@ The test opens the URL in browser, find the table displayed, click a column labe
 
 ![ReactTable - Simple Table demo](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/docs/react-table_js_org_demo.png)
 
+This running demo would be useful for you to develop a test for your React.js-powered application. 
+
 ## How to run the demonstration
 
 1. git clone this project `KatalonDiscussion4391` to your local PC
@@ -36,6 +38,8 @@ The test opens the URL in browser, find the table displayed, click a column labe
 7. The test case should run through to the end without significant processing error.
 8. However the test case is likely to report FAILURE, which means the number of unfound data > 0. This is due to the odd behavior of the AUT: data displayed in the [Application Under Test](https://react-table.js.org/#/story/simple-table)'s Table changes all the time.
 
+
+
 ## What I have learned.
 
 I am not familiar with React.js at all now (July 2018). This is my first experience of the React.js framework. Therefore I can not say anything definite about *how to test React.js-powered application using Katalon Studio*. All I can do is just to describe what I have done and found.
@@ -45,18 +49,38 @@ I want you to read the test case  [TC1](https://github.com/kazurayam/KatalonDisc
 ### dealing with nested &lt;iframe&gt;
 
 The [Application Under Test](https://react-table.js.org/#/story/simple-table) contains 2 nested &lt;iframe&gt;. The test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) calls [WebUI.switchToFrame](https://docs.katalon.com/display/KD/%5BWebUI%5D+Switch+To+Frame) in order to switch the scope of DOM navigation.
-One thing to be noted is that the Test Object I made, for example [Object Repository/Page_React Table/iframe1components/iframe2components/div_ReactTable](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Object%20Repository/Page_React%20Table/iframe1components/iframe2components/div_ReactTable.rs) does Not have parent object.
 
-![]()
+### What is `Parent iframe` ?
 
+One thing to be noted is that the Test Objects I made, for example [Object Repository/Page_React Table/iframe1components/iframe2components/div_ReactTable](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Object%20Repository/Page_React%20Table/iframe1components/iframe2components/div_ReactTable.rs) does NOT have parent object.
 
+![No parent object](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/docs/no_parent_iframe.png)
+
+In the Test Objct's Settings UI I found an option named `Parent iframe`. I tried this opton on, then it did not work for me. So I descided not to use the `Parent iframe` option.
 
 ### waiting for elements present carefully
 
-### Katalon's Recorder and Spy do not help much
+You can easily find that the test case [TC1](https://github.com/kazurayam/KatalonDiscussion4391/blob/master/Scripts/TC1/Script1532262700819.groovy) makes frequent call to WebUI.verifyElementPresent(). This is to wait for the documents in &lt;iframe&gt; to be loaded. It depends how long seconds it would take for document loading.
+
+### Katalon's Recorder and Spy do not help
+
+Once I tried Katalon's Recoder to auto-generate Test Objects which point parts of ReactTable. It generated many test objects, but I found these auto-generated stuff useless. I created necessary Test Objects manually, one-by-one, specifying appropriate selectors by XPath and CSS Selectors.
+
+I think that Web Recorder and Spy --- these tools are designed for simpler Web apps; Recorder and Spy is not appropriate tools to deal with web application powered by sophisticated JavaScript frameworks --- jQuery, Angular and React.
+
 
 ### need skill for Browser's DevTool, XPath, CSS selector
 
+If you are going to test React.js-powered appliation, you should not expect Recorder and Spy to help you. The real testers should get well-trained the following 3 items:
+- [Browser's DevTool, DOM viewer DOM](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-dom?hl=en)
+- [XPath](https://www.w3schools.com/xml/xpath_intro.asp)
+- [CSS Selector](https://www.w3schools.com/cssref/css_selectors.asp)
+
+### Katalon Studio is not aware how the DOM is constructed
+
+Katalon Studio runs on top of the Selenium WebDriver. WebDriver looks at DOM in Browser. DOM --- Document Object Model --- is what you can see in the Browsers DevTool's DOM Viewer. Katalon Studio and Selenium Webdriver --- they are not aware at all how the DOM is constructed using which JavaScript frameworks. Katalon Studio does not know jQuery, Angurlar, React at all. All it see is DOM; that's all.
+
+
 ## Related discussions
 
-https://forum.katalon.com/discussion/5236/possible-bug-with-web-object-spy-and-elements-in-iframe
+1. https://forum.katalon.com/discussion/5236/possible-bug-with-web-object-spy-and-elements-in-iframe
