@@ -69,7 +69,7 @@ Once I tried Katalon's Recoder to auto-generate Test Objects which point parts o
 ### Skill for Browser's DevTool, XPath, CSS selector needed
 
 If you are going to test React.js-powered appliation, you should not expect Recorder and Spy to help you at all. The real testers should get well-trained themselves for the following 3 items:
-- [Browser's DevTool, DOM viewer DOM](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-dom?hl=en)
+- [Browser's DevTool, DOM viewer](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-dom?hl=en)
 - [XPath](https://www.w3schools.com/xml/xpath_intro.asp)
 - [CSS Selector](https://www.w3schools.com/cssref/css_selectors.asp)
 
